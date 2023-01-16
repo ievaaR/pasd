@@ -43,3 +43,8 @@
 /home/bogdanteodoru/PASD/pasd/ddapi/obj/Debug/net7.0/ddapi.pdb
 /home/bogdanteodoru/PASD/pasd/ddapi/obj/Debug/net7.0/ddapi.genruntimeconfig.cache
 /home/bogdanteodoru/PASD/pasd/ddapi/obj/Debug/net7.0/ref/ddapi.dll
+/home/bogdanteodoru/PASD/pasd/ddapi/bin/Debug/net7.0/System.Web.Cors.dll
+/home/bogdanteodoru/PASD/pasd/ddapi/bin/Debug/net7.0/System.Net.Http.Formatting.dll
+/home/bogdanteodoru/PASD/pasd/ddapi/bin/Debug/net7.0/System.Web.Http.dll
+/home/bogdanteodoru/PASD/pasd/ddapi/bin/Debug/net7.0/System.Web.Http.Cors.dll
+/home/bogdanteodoru/PASD/pasd/ddapi/bin/Debug/net7.0/Newtonsoft.Json.Bson.dll
