@@ -5814,24 +5814,25 @@
     ]
   },
   "packageFolders": {
-    "/home/bogdanteodoru/.nuget/packages/": {}
+    "/Users/randy/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/bogdanteodoru/PASD/pasd/ddapi/ddapi.csproj",
+      "projectUniqueName": "/Users/randy/Desktop/newPasd/pasd/ddapi/ddapi.csproj",
       "projectName": "ddapi",
-      "projectPath": "/home/bogdanteodoru/PASD/pasd/ddapi/ddapi.csproj",
-      "packagesPath": "/home/bogdanteodoru/.nuget/packages/",
-      "outputPath": "/home/bogdanteodoru/PASD/pasd/ddapi/obj/",
+      "projectPath": "/Users/randy/Desktop/newPasd/pasd/ddapi/ddapi.csproj",
+      "packagesPath": "/Users/randy/.nuget/packages/",
+      "outputPath": "/Users/randy/Desktop/newPasd/pasd/ddapi/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/bogdanteodoru/.nuget/NuGet/NuGet.Config"
+        "/Users/randy/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
       ],
       "sources": {
+        "/usr/local/share/dotnet/library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -5890,7 +5891,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/7.0.102/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.101/RuntimeIdentifierGraph.json"
       }
     }
   },

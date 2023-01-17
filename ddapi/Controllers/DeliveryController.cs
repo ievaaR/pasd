@@ -1,7 +1,9 @@
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using System.Net.Http.Headers;
-using ddapi.Models;
+using ddapi.Models.Offer;
+using Microsoft.Extensions.Logging;
+
 
 namespace ddapi.Controllers;
 
@@ -9,6 +11,8 @@ namespace ddapi.Controllers;
 [Route("api/[controller]")]
 public class DeliveryController : Controller {
    List<int> idArray = new List<int>();
+   private readonly ILogger _logger;
+
 
    [HttpGet]
    public string GetAllDeliveries() {
@@ -29,15 +33,15 @@ public class DeliveryController : Controller {
    }
 
    [HttpPost]
-   public async Task<String> PostDelivery() {
+   public async Task<String> PostDelivery([FromBody] Offer off) {
       using (var httpClient = new HttpClient()) {
          using (var request = new HttpRequestMessage(new HttpMethod("POST"), "https://pasd-webshop-api.onrender.com/api/delivery/")) {
             request.Headers.TryAddWithoutValidation("accept", "application/json");
             request.Headers.TryAddWithoutValidation("x-api-key", "4sqmKzToVkUoTsVfze4X"); 
 
            // request.Content = new StringContent("{\n  \"price_in_cents\": 0,\n  \"expected_delivery_datetime\": \"2023-01-16T21:02:47.309Z\",\n  \"order_id\": 0\n}");
-            request.Content.Headers.ContentType = MediaTypeHeaderValue.Parse("application/json"); 
-
+            var json = JsonConvert.SerializeObject(off);
+            request.Content = new StringContent(json);
             var response = await httpClient.SendAsync(request);
             var res = await response.Content.ReadAsStringAsync();
             var delivery = JsonConvert.DeserializeObject<Delivery>(res);
