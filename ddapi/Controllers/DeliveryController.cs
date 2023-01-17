@@ -35,7 +35,7 @@ public class DeliveryController : Controller {
             request.Headers.TryAddWithoutValidation("accept", "application/json");
             request.Headers.TryAddWithoutValidation("x-api-key", "4sqmKzToVkUoTsVfze4X"); 
 
-            request.Content = new StringContent("{\n  \"price_in_cents\": 0,\n  \"expected_delivery_datetime\": \"2023-01-16T21:02:47.309Z\",\n  \"order_id\": 0\n}");
+           // request.Content = new StringContent("{\n  \"price_in_cents\": 0,\n  \"expected_delivery_datetime\": \"2023-01-16T21:02:47.309Z\",\n  \"order_id\": 0\n}");
             request.Content.Headers.ContentType = MediaTypeHeaderValue.Parse("application/json"); 
 
             var response = await httpClient.SendAsync(request);
@@ -54,8 +54,8 @@ public class DeliveryController : Controller {
             request.Headers.TryAddWithoutValidation("accept", "application/json");
             request.Headers.TryAddWithoutValidation("x-api-key", "4sqmKzToVkUoTsVfze4X"); 
 
-            request.Content = new StringContent("{\n  \"status\": \"TRN\"\n}");
-            request.Content.Headers.ContentType = MediaTypeHeaderValue.Parse("application/json"); 
+            //request.Content = new StringContent("{\n  \"status\": \"TRN\"\n}");
+            //request.Content.Headers.ContentType = MediaTypeHeaderValue.Parse("application/json"); 
 
             var response = await httpClient.SendAsync(request);
             return await response.Content.ReadAsStringAsync();
