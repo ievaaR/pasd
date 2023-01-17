@@ -1,3 +1,6 @@
+using ddapi.Models;
+using ddapi.Services;
+
 var  MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
 
 var builder = WebApplication.CreateBuilder(args);
@@ -14,6 +17,10 @@ builder.Services.AddCors(options =>
 // Add services to the container.
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+builder.Services.Configure<DatabaseSettings>(
+    builder.Configuration.GetSection("Database")
+);
+builder.Services.AddSingleton<DeliveryService>();
 builder.Services.AddControllers();
 
 builder.Services.AddEndpointsApiExplorer();
