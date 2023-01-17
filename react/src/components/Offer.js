@@ -9,12 +9,12 @@ export function Offer () {
     e.preventDefault();
     try {
       console.log(expected_delivery_datetime);
-      let res = await fetch("https://pasd-webshop-api.onrender.com/api/delivery/", {
-        headers: {
+      let res = await fetch("http://localhost:5258/api/delivery/", {
+        /*headers: {
           'accept': 'application/json',
           'x-api-key': '4sqmKzToVkUoTsVfze4X',
           'Content-Type': 'application/json'
-        },
+        }, */
         method: "POST",
         body: JSON.stringify({
           order_id: order_id,
@@ -22,6 +22,7 @@ export function Offer () {
           expected_delivery_datetime: expected_delivery_datetime,
         }),
       });
+      console.log(res);
       let resJson = await res.json();
       if (res.status === 200) {
         setOrderId("");

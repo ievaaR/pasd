@@ -16,11 +16,7 @@ export const Order = () => {
 
     //sends a @GET request to API
     const getAllOrders = () => {
-    axios.get('https://pasd-webshop-api.onrender.com/api/order/', {
-        headers: {
-            'accept': 'application/json',
-            'x-api-key': '4sqmKzToVkUoTsVfze4X'
-        }
+    axios.get('http://localhost:5258/api/order', {
     }).then(res => {
         const allOrders = res.data.orders;
         getOrders(allOrders);
