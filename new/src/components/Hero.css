@@ -1,0 +1,38 @@
+.hero {
+    width: 100%; 
+    height: 100%;
+    position: relative;
+    object-fit: cover;
+}
+
+
+.hero-text {
+    position: absolute;
+    top: 25%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+}
+
+.hero-text h1{
+    font-size: 3rem;
+    font-weight: 800;
+}
+
+.hero-text .show{
+    font-size: 1.3rem;
+    font-weight: 800;
+    text-decoration: none;
+    color: rgb(25, 80, 25);
+}
+
+
+.hero-text .show:hover{
+    background-color: rgb(2, 77, 2);
+    color: #fff;
+    border-radius: 4px;
+    transition: all 0.2s ease-in-out;
+}
+
+
+
+
